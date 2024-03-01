@@ -32,6 +32,9 @@ int main(int ac, char **argv)
 			continue;
 		if (if_builtin_command(cmd[0]))
 			handle_builtin(cmd, argv, &status, i);
+
+			
+        
 		else
 			status = execute_command(cmd, argv, i);
 	}
