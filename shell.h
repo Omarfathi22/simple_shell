@@ -35,9 +35,13 @@ void print_errors(char *nm, char *cmd, int i);
 /* builtin.c */
 int if_builtin_command(char *cmd);
 void handle_builtin(char **cmd, char **arg, int *s, int i);
+int hsh_cd(char *args[], char *input_stdin, int *exit_status);
+int hsh_setenv(char *args[],  char *input_stdin, int *exit_status);
+int hsh_unsetenv(char **args,  char *input_stdin, int *exit_status);
+
 void print_environment(char **cmd, int *s);
 void exit_shell(char **cmd, char **arg, int *s, int i);
-
+/* builtin functions */
 int positive_num(char *s);
 int _atoi(char *s);
 #endif
